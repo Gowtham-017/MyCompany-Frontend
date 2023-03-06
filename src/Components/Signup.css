@@ -1,0 +1,47 @@
+.signupbox {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 20px;
+   margin-left: 600px;
+   margin-top: 150px;
+    max-width: 400px;
+   
+  }
+  .bg{
+    background-image: url("img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    margin-top: -190px;
+    
+
+  }
+  
+  .signupinput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #524d4d;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  .button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .signupbox button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .h11{
+    font-size: 40px;
+    margin-top: 190px;
+    color:white;
+  }

@@ -1,0 +1,134 @@
+.containersign {
+    color: black;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    border-style: groove;
+    background-color: white;
+    font-size: 1.5rem;
+    display:-webkit-inline-box;
+  }
+  .body{
+    background-color: black;
+  }
+  .login {
+   
+    background-color: rgb(237, 228, 228);
+    display: flex;
+  }
+  
+  .boxsign {
+    height: 99vh;
+    width:50%;
+    background-color:white;
+    flex-direction: column;
+    flex-basis: 100%;
+    
+    background-color:silver;
+    justify-content: space-evenly;
+    align-items: center;   
+    display: flex;
+  }
+  
+  .signin {
+    
+    font-family: Abhaya Libre ExtraBold;
+    font-size: 70px;
+    
+  }
+
+  .inputname {
+    color: #fff;
+    text-align: center;
+    background-color: #093545;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    font-family: Lexend Deca;
+    display: flex;
+  }
+  .password {
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    width: 240px;
+    background-color: #093545;
+    border: none;
+    font-size: large;
+    border-radius: 10px;
+    justify-content: center;
+    font-family: Lexend Deca;
+    display: flex;
+  }
+  
+
+  .forgotpassword {
+    margin-bottom: 5px;
+    margin-left: 300px;
+    font-size: medium;
+  }
+  
+  .logbutton{
+    
+        color: #fff;
+        text-align: center;
+        width: 100px;
+        background-color:orange;
+        border: none;
+        border-radius: 10px;
+        flex-direction: row;
+        flex-basis: 6%;
+        align-items: center;
+        justify-content: center;
+        font-family: Lexend Deca;
+        font-size: 1.5rem;
+        display: flex;
+      }
+      .logbutton1{
+    
+        color: black;
+        text-align: center;
+        width: 100px;
+        background-color:grey;
+        border: none;
+        margin-left: 30px;
+        border-radius: 10px;
+        flex-direction: row;
+        flex-basis: 6%;
+        align-items: center;
+        justify-content: center;
+        font-family: Lexend Deca;
+        font-size: 1.5rem;
+        display: flex;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+        color:white;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color:black;
+      }
+      
+      a:active {
+        text-decoration: none;
+      }
+ .login{
+    text-align: center;
+    justify-content: center;
+ }
+
+ .image {
+    height:300px;
+    width:1200px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("log4.jpg");
+ 
+  }
