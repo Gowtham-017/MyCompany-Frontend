@@ -8,9 +8,8 @@
    
   }
   .bg{
-    background-image: url("img1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%);
+     background: linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); 
     height:100vh;
     margin-top: -190px;
     
@@ -43,5 +42,5 @@
   .h11{
     font-size: 40px;
     margin-top: 190px;
-    color:white;
+    color:black;
   }

@@ -22,7 +22,7 @@ const Signin = () => {
 
   }
   return (
-   <div className='body'>
+   <div className='bodysignin'>
     <div className="containersign">
       
         <div className="boxsign">

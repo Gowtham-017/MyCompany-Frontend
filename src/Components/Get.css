@@ -5,7 +5,19 @@
     height: 100%;
   }
   
-
+  table {
+    border: 2px solid forestgreen;
+    width: 800px;
+    height: 200px;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    text-align: center;
+  }
   .backget{
     margin-left: -1500px;
     margin-top: 10px;
@@ -33,4 +45,25 @@
   button[type="submit"]:hover {
     background-color: #3e8e41;
   }
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
   
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }

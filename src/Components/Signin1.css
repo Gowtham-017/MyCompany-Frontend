@@ -2,13 +2,15 @@
     color: black;
     text-align: center;
     width: 50%;
-    height: 50%;
+    height: 20%;
+    margin-top: 30px;
     border-style: groove;
     background-color: white;
+    margin-bottom: 30px;
     font-size: 1.5rem;
-    display:-webkit-inline-box;
+    display:-webkit-inline-flex;
   }
-  .body{
+  .bodysignin{
     background-color: black;
   }
   .login {

@@ -1,68 +1,103 @@
-import React ,{useState } from 'react';
 import './Post.css';
 import {Link} from "react-router-dom"
+import  axios  from 'axios';
 import { FaBackward } from 'react-icons/fa';
-function Post() {
-
-  const[sno,setSno]=useState(null);
-  const[name,setName]=useState(null);
-  const[role,setRole]=useState(null);
-  const[salary,setSalary]=useState(null);
-  const[experience,setExperience]=useState(null);
-
-  const handleInputChange = (e) => {
-    const{id,value} = e.target;
-    if(id==="sno"){
-      setSno(value);
-    }
-    if(id==="name"){
-      setName(value);
-    }
-    if(id==="role"){
-      setRole(value);
-    }
-    if(id==="salary"){
-      setSalary(value);
-    }
-    if(id==="experience"){
-      setExperience(value);
-    }
+import React, { Component } from 'react'
+  
+  export class Post extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        empid:'',
+        name:'',
+        salary: '',
+        role: '',
+        experience:'',
+        phone: '',
+        email: '',
+    };
   }
 
-  const handleSubmit = () => {
-    console.log(sno,name,role,salary,experience);
-        // document.write("Logging In");
-        alert("Successfully Added the Data");
+  handleIdChange = (event) => {
+    this.setState({ empid: event.target.value });
+  };
+
+  handleNameChange = (event) => {
+    this.setState({ name: event.target.value });
+  };
+
+  handleRoleChange = (event) => {
+    this.setState({ role: event.target.value });
+  };
+
+  handleSalaryChange = (event) => {
+    this.setState({ salary: event.target.value });
+  };
+
+  handleExperienceChange = (event) => {
+    this.setState({ experience: event.target.value });
+  };
+
+  handleEmailChange = (event) => {
+    this.setState({ email: event.target.value });
+  };
+
+  handlePhoneChange = (event) => {
+    this.setState({ phone: event.target.value });
+  };
+
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const data = {
+        empid: this.state.empid,
+        name: this.state.name,
+        salary: this.state.salary,
+        role: this.state.role,
+        experience: this.state.experience,
+        phone: this.state.phone,
+        email: this.state.email,
+        
+      };
+    
+      axios.post('http://127.0.0.1:8080/postmap', data)
+  };
+
+  handleSubmitChange =() => {
+    alert("Successfully Added the Data");
   }
-
-
-
- 
-
-  return (
-    <div className='headerpost'>
-     <div className='backpost'> <Link to="Navigation"> <button ><FaBackward /> </button> </Link> </div>
-      <h1>Post Employee Details</h1>
-   <div className='containerpost'>
-    <div className='formpost'>
-      <form>
-        ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" className='inputpost' id="sno" value={sno} onChange= {(e) => handleInputChange(e)} /><br /><br />
-        Name &nbsp;&nbsp;
-        <input type="text" className='inputpost' id="name" value={name} onChange={(e) => handleInputChange(e)}  /><br /><br />
-        Role &nbsp;&nbsp;&nbsp;
-        <input type="text" className='inputpost' id="role" value={role}  onChange= {(e) => handleInputChange(e)} /><br /><br />
-        Salary &nbsp;&nbsp;
-        <input type="text" className='inputpost' id="salary" value={salary} onChange={(e) => handleInputChange(e)} /><br /><br />
-        Experience &nbsp;
-        <input type="text" className='inputpost' id="experience" value={experience} onChange={(e) => handleInputChange(e)} /><br /><br />
-        <br />
-        <input type="submit" className='buttonpost'  onClick={() => handleSubmit()} value="Submit"></input>
-      </form>
+  render() {
+    return (
+      <div className='bodypost' >
+      <div className='backpost'> <Link to="Navigation"> <button ><FaBackward /> </button> </Link> </div>
+     
+    <div className='containerpost'>
+    <h2 >Post Employee Details</h2>
+     <div className='formpost'>
+       <form onSubmit={this.handleSubmit}>
+         ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="text" className='inputpost'  value={this.state.empid} onChange= {this.handleIdChange} /><br /><br />
+         Name &nbsp;&nbsp;
+         <input type="text" className='inputpost'  value={this.state.name} onChange={this.handleNameChange}  /><br /><br />
+         Salary &nbsp;&nbsp;
+         <input type="text" className='inputpost'  value={this.state.salary} onChange={this.handleSalaryChange} /><br /><br />
+         Role &nbsp;&nbsp;&nbsp;
+         <input type="text" className='inputpost'  value={this.state.role}  onChange= {this.handleRoleChange} /><br /><br />
+         Experience &nbsp;
+         <input type="text" className='inputpost'  value={this.state.experience} onChange={this.handleExperienceChange} /><br /><br />
+         Phone &nbsp;&nbsp;
+         <input type="text" className='inputpost'  value={this.state.phone} onChange={this.handlePhoneChange} /><br /><br />
+         Email &nbsp;&nbsp;
+         <input type="text" className='inputpost'  value={this.state.email} onChange={this.handleEmailChange} /><br /><br />
+         <br />
+         <input type="submit" className='buttonpost'  onClick={this.handleSubmitChange} value="Submit"></input>
+       </form>
+     </div>
+     </div>
     </div>
-    </div>
-   </div>
-  );
+    );
+  }
 }
 
-export default Post;
+export default Post
+
